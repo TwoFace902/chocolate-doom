@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libopl.a  CMakeFiles/opl.dir/opl.c.obj CMakeFiles/opl.dir/opl_linux.c.obj CMakeFiles/opl.dir/opl_obsd.c.obj CMakeFiles/opl.dir/opl_queue.c.obj CMakeFiles/opl.dir/opl_sdl.c.obj CMakeFiles/opl.dir/opl_timer.c.obj CMakeFiles/opl.dir/opl_win32.c.obj CMakeFiles/opl.dir/ioperm_sys.c.obj CMakeFiles/opl.dir/opl3.c.obj
+C:\msys64\mingw64\bin\ranlib.exe libopl.a

@@ -1,0 +1,2 @@
+C:\msys64\mingw64\bin\ar.exe qc libpcsound.a  CMakeFiles/pcsound.dir/pcsound.c.obj CMakeFiles/pcsound.dir/pcsound_bsd.c.obj CMakeFiles/pcsound.dir/pcsound_sdl.c.obj CMakeFiles/pcsound.dir/pcsound_linux.c.obj CMakeFiles/pcsound.dir/pcsound_win32.c.obj
+C:\msys64\mingw64\bin\ranlib.exe libpcsound.a

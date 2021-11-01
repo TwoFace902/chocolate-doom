@@ -448,7 +448,7 @@ void S_StartSound(void *origin_p, int sfx_id)
     sfx = &S_sfx[sfx_id];
 
     // Initialize sound parameters
-    pitch = NORM_PITCH;
+    pitch = NORM_PITCH + (M_Random()%127) - 64;
     if (sfx->link)
     {
         volume += sfx->volume;
@@ -492,14 +492,14 @@ void S_StartSound(void *origin_p, int sfx_id)
     }
 
     // hacks to vary the sfx pitches
-    if (sfx_id >= sfx_sawup && sfx_id <= sfx_sawhit)
-    {
-        pitch += 8 - (M_Random()&15);
-    }
-    else if (sfx_id != sfx_itemup && sfx_id != sfx_tink)
-    {
-        pitch += 16 - (M_Random()&31);
-    }
+//    if (sfx_id >= sfx_sawup && sfx_id <= sfx_sawhit)
+//    {
+//        pitch += 8 - (M_Random()&15);
+//    }
+//    else if (sfx_id != sfx_itemup && sfx_id != sfx_tink)
+//    {
+//        pitch += 16 - (M_Random()&31);
+//    }
     pitch = Clamp(pitch);
 
     // kill old sound

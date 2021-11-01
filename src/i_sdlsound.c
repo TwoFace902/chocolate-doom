@@ -25,6 +25,7 @@
 #include <assert.h>
 #include "SDL.h"
 #include "SDL_mixer.h"
+#include <time.h>
 
 #ifdef HAVE_LIBSAMPLERATE
 #include <samplerate.h>
@@ -38,6 +39,7 @@
 #include "m_misc.h"
 #include "w_wad.h"
 #include "z_zone.h"
+#include "doom/m_random.h"
 
 #include "doomtype.h"
 
@@ -295,6 +297,16 @@ static allocated_sound_t * GetAllocatedSoundBySfxInfoAndPitch(sfxinfo_t *sfxinfo
 
 static allocated_sound_t * PitchShift(allocated_sound_t *insnd, int pitch)
 {
+    int step = 10;
+    int pitchBitch = (M_Random() % step);
+    int max_shift
+    = 2;
+    float step_size = (float)max_shift/(float)step;
+    float rand_boy;
+    if(pitchBitch == 0)
+        rand_boy = 3.0F;
+    else
+        rand_boy = step_size*(float)pitchBitch;
     allocated_sound_t * outsnd;
     Sint16 *inp, *outp;
     Sint16 *srcbuf, *dstbuf;
@@ -303,9 +315,8 @@ static allocated_sound_t * PitchShift(allocated_sound_t *insnd, int pitch)
     srcbuf = (Sint16 *)insnd->chunk.abuf;
     srclen = insnd->chunk.alen;
 
-    // determine ratio pitch:NORM_PITCH and apply to srclen, then invert.
-    // This is an approximation of vanilla behaviour based on measurements
-    dstlen = (int)((1 + (1 - (float)pitch / NORM_PITCH)) * srclen);
+    //Completely fuck the audio up
+    dstlen = (int)((1 + (1 - (float)pitch / NORM_PITCH)) * srclen * rand_boy);
 
     // ensure that the new buffer is an even length
     if ((dstlen % 2) == 0)

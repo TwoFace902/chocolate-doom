@@ -1,0 +1,1 @@
+-IC:/Users/Brandon/Documents/codingshit/chocolate-doom/src/setup/.. -IC:/Users/Brandon/Documents/codingshit/chocolate-doom/cmake-build-debug/src/setup/../.. -IC:/Users/Brandon/Documents/codingshit/chocolate-doom/textscreen/. -isystem C:/msys64/mingw64/include/SDL2 

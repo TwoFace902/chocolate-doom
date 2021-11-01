@@ -1,0 +1,23 @@
+"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Brandon\Documents\codingshit\chocolate-doom
+-- The C compiler identification is GNU 10.2.0
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found SDL2: C:/msys64/mingw64/include/SDL2 (found suitable version "2.0.14", minimum required is "2.0.7") 
+-- Found SDL2_mixer: C:/msys64/mingw64/include/SDL2 (found suitable version "2.0.4", minimum required is "2.0.2") 
+-- Found SDL2_net: C:/msys64/mingw64/include/SDL2 (found suitable version "2.0.1", minimum required is "2.0.0") 
+-- Could NOT find samplerate (missing: SAMPLERATE_INCLUDE_DIR SAMPLERATE_LIBRARY) 
+-- Found ZLIB: C:/msys64/mingw64/lib/libz.dll.a (found version "1.2.11") 
+-- Found PNG: C:/msys64/mingw64/lib/libpng.dll.a (found version "1.6.37") 
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - found
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Brandon/Documents/codingshit/chocolate-doom/cmake-build-debug
